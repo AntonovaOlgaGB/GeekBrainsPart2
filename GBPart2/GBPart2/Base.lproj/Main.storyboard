@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Form Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginFormController" customModule="GBPart2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIk-CT-dpy">
+                                <rect key="frame" x="0.0" y="13" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBZ-G8-tQQ">
+                                        <rect key="frame" x="146.5" y="170" width="121.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cd4-85-zLB">
+                                        <rect key="frame" x="172" y="253.5" width="70" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpM-qd-zLK">
+                                        <rect key="frame" x="164.5" y="343.5" width="85" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSH-KO-Ds4">
+                                        <rect key="frame" x="122" y="291.5" width="170" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="nEQ-HY-s19"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-7d-e3Z">
+                                        <rect key="frame" x="169.5" y="442.5" width="75" height="42"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="Войти"/>
+                                        <connections>
+                                            <action selector="loginButtomPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAu-4D-wJj"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j75-fd-Xdi">
+                                        <rect key="frame" x="122" y="381.5" width="170" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="qFm-Vs-4ro"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstItem="oFP-7d-e3Z" firstAttribute="top" secondItem="j75-fd-Xdi" secondAttribute="bottom" constant="27" id="3Z4-c3-M64"/>
+                                    <constraint firstItem="tBZ-G8-tQQ" firstAttribute="top" secondItem="dIk-CT-dpy" secondAttribute="top" constant="170" id="9vu-O6-Lco"/>
+                                    <constraint firstItem="j75-fd-Xdi" firstAttribute="top" secondItem="jpM-qd-zLK" secondAttribute="bottom" constant="8" id="A4a-gp-2Wj"/>
+                                    <constraint firstItem="tBZ-G8-tQQ" firstAttribute="centerX" secondItem="dIk-CT-dpy" secondAttribute="centerX" id="BAT-Sc-L0G"/>
+                                    <constraint firstItem="j75-fd-Xdi" firstAttribute="centerX" secondItem="dIk-CT-dpy" secondAttribute="centerX" id="IgK-zF-5Vu"/>
+                                    <constraint firstItem="oFP-7d-e3Z" firstAttribute="centerX" secondItem="dIk-CT-dpy" secondAttribute="centerX" id="KS2-Eb-4VQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="oFP-7d-e3Z" secondAttribute="bottom" constant="20" id="NiP-G0-ZMC"/>
+                                    <constraint firstAttribute="trailing" secondItem="tBZ-G8-tQQ" secondAttribute="trailing" constant="133" id="O4A-hC-HZ0"/>
+                                    <constraint firstItem="jpM-qd-zLK" firstAttribute="top" secondItem="vSH-KO-Ds4" secondAttribute="bottom" constant="18" id="PHU-LB-hFS"/>
+                                    <constraint firstItem="vSH-KO-Ds4" firstAttribute="top" secondItem="Cd4-85-zLB" secondAttribute="bottom" constant="8" id="dSL-1g-6cJ"/>
+                                    <constraint firstItem="Cd4-85-zLB" firstAttribute="centerX" secondItem="dIk-CT-dpy" secondAttribute="centerX" id="dv0-1q-fAK"/>
+                                    <constraint firstItem="jpM-qd-zLK" firstAttribute="centerX" secondItem="dIk-CT-dpy" secondAttribute="centerX" id="icK-Pn-GyR"/>
+                                    <constraint firstItem="vSH-KO-Ds4" firstAttribute="centerX" secondItem="dIk-CT-dpy" secondAttribute="centerX" id="rTA-4H-2cu"/>
+                                    <constraint firstItem="Cd4-85-zLB" firstAttribute="top" secondItem="tBZ-G8-tQQ" secondAttribute="bottom" constant="51" id="xSd-Nh-irh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6N9-CU-DNk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dIk-CT-dpy" secondAttribute="bottom" id="6oq-aM-G0N"/>
+                            <constraint firstItem="6N9-CU-DNk" firstAttribute="trailing" secondItem="dIk-CT-dpy" secondAttribute="trailing" id="Yj7-Hw-KdX"/>
+                            <constraint firstItem="dIk-CT-dpy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nGh-mg-Ebt"/>
+                            <constraint firstItem="dIk-CT-dpy" firstAttribute="leading" secondItem="6N9-CU-DNk" secondAttribute="leading" id="rSg-0c-Ld8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
