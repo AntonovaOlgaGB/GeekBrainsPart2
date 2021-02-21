@@ -2,7 +2,7 @@
 //  AllFriendsViewController.swift
 //  GBPart2
 //
-//  Created by Olya on 18.02.2021.
+//  Created by Olya on 21.02.2021.
 //
 
 import UIKit
