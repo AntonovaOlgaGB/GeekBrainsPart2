@@ -11,6 +11,18 @@ private let reuseIdentifier = "Cell"
 
 class FriendImageController: UICollectionViewController {
 
+    @IBAction func pushImage (segue: UIStoryboardSegue)
+    {
+        if segue.identifier == "ShowLargeImage"{
+            let FriendImageController = segue.source as! AllFriendsViewController
+            
+            if let indexPath = FriendImageController.tableView.indexPathForSelectedRow {
+                let cell = FriendImageController.tableView.cellForRow(at: indexPath)
+                
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,19 +49,18 @@ class FriendImageController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendImageCell", for: indexPath) as! FriendImageCell
     
-        // Configure the cell
     
         return cell
     }
